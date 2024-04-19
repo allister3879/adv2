@@ -10,7 +10,7 @@ import (
 	"os"
 	"time"
 
-	"greenlight/internal/data"
+	"greenlight.d.net/internal/datass"
 
 	_ "github.com/lib/pq"
 )
@@ -34,7 +34,7 @@ func main() {
 	flag.IntVar(&cfg.port, "port", 4000, "API server port")
 	flag.StringVar(&cfg.env, "env", "development", "Environment (development|staging|production)")
 
-	flag.StringVar(&cfg.db, "db", "postgres://username:password@localhost/s.alshynovDB?sslmode=disable", "Database connection string")
+	flag.StringVar(&cfg.db, "db", "postgres://postgres:3879@localhost/d.narynbekovaDB?sslmode=disable", "Database connection string")
 
 	flag.Parse()
 	logger := log.New(os.Stdout, "", log.Ldate|log.Ltime)
